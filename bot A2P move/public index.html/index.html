@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2P Bot - Site Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="logo">🤖 A2P Bot</h1>
+                <ul class="nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#features">Commandes</a></li>
+                    <li><a href="#about">À propos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>Bot Discord de Gestion Vocale</h2>
+                <p>Un bot Discord français puissant pour gérer vos salons vocaux avec facilité</p>
+                <div class="cta-buttons">
+                    <a href="#features" class="btn-primary">Voir les Commandes</a>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1407399805134700635&permissions=8&integration_type=0&scope=bot" class="btn-secondary" target="_blank">Ajouter le Bot</a>
+                </div>
+                
+                <!-- Section Essai Gratuit -->
+                <div class="trial-section">
+                    <h3>🎁 Essai Gratuit - 1 Mois</h3>
+                    <p>Testez toutes les fonctionnalités du bot A2P gratuitement !</p>
+                    <div class="trial-benefit">
+                        <span class="free-tag">✨ GRATUIT</span>
+                        <span class="duration">pendant 1 mois</span>
+                    </div>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1407399805134700635&permissions=8&integration_type=0&scope=bot" class="btn-trial" target="_blank">🚀 Commencer l'essai gratuit</a>
+                </div>
+
+                <!-- Section Achat à Vie -->
+                <div class="payment-section">
+                    <h3>💎 Achat à Vie</h3>
+                    <p>Après l'essai, gardez le bot A2P pour toujours !</p>
+                    <div class="price-tag">
+                        <span class="price">10€</span>
+                        <span class="duration">à vie</span>
+                    </div>
+                    <div id="paypal-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Commandes Disponibles</h2>
+                <div class="command-grid">
+                    <div class="command-card">
+                        <h3>+move</h3>
+                        <p>Déplace un membre entre les salons vocaux</p>
+                        <span class="usage">Usage: +move @utilisateur</span>
+                    </div>
+                    <div class="command-card">
+                        <h3>+find</h3>
+                        <p>Recherche un membre sur le serveur</p>
+                        <span class="usage">Usage: +find nom</span>
+                    </div>
+                    <div class="command-card">
+                        <h3>+join</h3>
+                        <p>Rejoint le salon vocal d'un autre membre</p>
+                        <span class="usage">Usage: +join @utilisateur</span>
+                    </div>
+                    <div class="command-card">
+                        <h3>+vocal</h3>
+                        <p>Affiche tous les membres en vocal</p>
+                        <span class="usage">Usage: +vocal</span>
+                    </div>
+                    <div class="command-card">
+                        <h3>+serveur</h3>
+                        <p>Informations détaillées du serveur</p>
+                        <span class="usage">Usage: +serveur</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2>À propos du Bot</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Caractéristiques</h3>
+                        <ul>
+                            <li>🔒 Système de permissions sécurisé</li>
+                            <li>🎯 Commandes en français</li>
+                            <li>⚡ Réponses instantanées</li>
+                            <li>🗑️ Auto-suppression des messages</li>
+                            <li>🎨 Embeds magnifiques</li>
+                            <li>🛡️ Restrictions par rôles</li>
+                        </ul>
+                    </div>
+                    <div class="about-info">
+                        <h3>Permissions et Accès</h3>
+                        <p><strong>Toutes les commandes :</strong><br>
+                        Réservées aux administrateurs ou aux utilisateurs ayant le rôle <strong>"perm move.bot"</strong></p>
+                        
+                        <p><strong>Configuration requise :</strong><br>
+                        Créez un rôle nommé exactement <code>perm move.bot</code> sur votre serveur Discord et assignez-le aux utilisateurs autorisés à utiliser le bot.</p>
+                        
+                        <p><strong>Commandes disponibles :</strong><br>
+                        +move, +find, +join, +vocal, +serveur nécessitent toutes les permissions d'administrateur ou le rôle spécial.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 A2P Bot - Bot Discord de Gestion Vocale</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="invite.js"></script>
+    <script src="PayPalButton.js"></script>
+    <script>
+        // Initialiser le bouton PayPal
+        document.addEventListener('DOMContentLoaded', () => {
+            new PayPalButton('paypal-container', '10.00', 'EUR');
+        });
+    </script>
+</body>
+</html>
